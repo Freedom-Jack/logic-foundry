@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "task_id": "synthetic-helpdesk-routing",
+  "title": "Synthetic historical helpdesk routing",
+  "synthetic": true,
+  "purpose": "historical_judgment_reproduction",
+  "judgment_authority": "provisional synthetic historical examples",
+  "target_ids": [
+    "billing",
+    "privacy",
+    "delivery",
+    "escalation"
+  ],
+  "input_fields": {
+    "intake_code": {
+      "type": "categorical",
+      "available_at_decision": true,
+      "description": "Opaque code assigned by intake before routing; interpret only with the declared codebook version."
+    },
+    "channel": {
+      "type": "categorical",
+      "available_at_decision": true,
+      "description": "Channel through which the record arrived: web or phone."
+    },
+    "expedited": {
+      "type": "boolean",
+      "available_at_decision": true,
+      "description": "Whether the requester selected expedited handling before routing."
+    },
+    "scope": {
+      "type": "categorical",
+      "available_at_decision": true,
+      "description": "Whether the intake is routine or an exceptional process."
+    }
+  },
+  "scope": {
+    "field": "scope",
+    "equals": "routine",
+    "description": "Only routine helpdesk intake is within this bounded extraction task. Exceptional and other scopes require separate evidence."
+  },
+  "label_semantics": {
+    "resolved": "An explicit synthetic historical judgment. targets is a complete set for this record and can contain zero, one, or multiple target IDs.",
+    "unannotated": "No routing judgment is available. targets is null; this record supplies no positive or negative training labels.",
+    "disputed": "The historical judgment is unresolved. targets is null; acceptable_targets lists alternative complete target sets for uncertainty-aware assessment, not training.",
+    "empty_targets": "An explicit resolved empty set means that no listed route was assigned. It is distinct from unannotated null."
+  },
+  "reference": {
+    "path": "codebook.json",
+    "version": "synthetic-intake-v1"
+  },
+  "discovery": {
+    "min_support": 2,
+    "max_rule_width": 2,
+    "incorrect_cost": 3
+  }
+}

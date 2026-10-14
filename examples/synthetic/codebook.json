@@ -1,0 +1,83 @@
+{
+  "schema_version": 1,
+  "version": "synthetic-intake-v1",
+  "input_field": "intake_code",
+  "resolved_field": "topic",
+  "available_at_decision": true,
+  "authority": "synthetic pre-routing intake taxonomy",
+  "description": "Entirely invented reference data for testing reference resolution. These categories are assigned before routing. Aliases identify the same intake topic; this codebook contains no routing target mappings.",
+  "entries": {
+    "K31": {
+      "topic": "payments",
+      "description": "The intake record concerns a payment, charge, or account balance."
+    },
+    "V08": {
+      "topic": "payments",
+      "description": "The intake record concerns a payment, charge, or account balance."
+    },
+    "H52": {
+      "topic": "payments",
+      "description": "The intake record concerns a payment, charge, or account balance."
+    },
+    "X17": {
+      "topic": "personal_data",
+      "description": "The intake record concerns personal information and its handling."
+    },
+    "Q62": {
+      "topic": "personal_data",
+      "description": "The intake record concerns personal information and its handling."
+    },
+    "J04": {
+      "topic": "personal_data",
+      "description": "The intake record concerns personal information and its handling."
+    },
+    "S44": {
+      "topic": "shipment",
+      "description": "The intake record concerns a parcel or shipment."
+    },
+    "T09": {
+      "topic": "shipment",
+      "description": "The intake record concerns a parcel or shipment."
+    },
+    "P73": {
+      "topic": "shipment",
+      "description": "The intake record concerns a parcel or shipment."
+    },
+    "N00": {
+      "topic": "information_only",
+      "description": "The intake record supplies information and contains no requested action."
+    },
+    "F26": {
+      "topic": "information_only",
+      "description": "The intake record supplies information and contains no requested action."
+    },
+    "D61": {
+      "topic": "information_only",
+      "description": "The intake record supplies information and contains no requested action."
+    },
+    "C70": {
+      "topic": "mixed_account",
+      "description": "The intake record jointly concerns account payments and personal information."
+    },
+    "M15": {
+      "topic": "mixed_account",
+      "description": "The intake record jointly concerns account payments and personal information."
+    },
+    "E83": {
+      "topic": "mixed_account",
+      "description": "The intake record jointly concerns account payments and personal information."
+    },
+    "A50": {
+      "topic": "unclear",
+      "description": "The intake category was recorded as unclear; no additional subject distinction is available."
+    },
+    "A51": {
+      "topic": "unclear",
+      "description": "The intake category was recorded as unclear; no additional subject distinction is available."
+    },
+    "A52": {
+      "topic": "unclear",
+      "description": "The intake category was recorded as unclear; no additional subject distinction is available."
+    }
+  }
+}
